@@ -1,0 +1,29 @@
+
+.whatsapp
+{
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 4;
+}
+
+
+.whatsapp .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgba(179, 174, 174, 0.637);
+  color: rgb(15, 15, 15);
+  text-align:center;
+  padding: 5px 0;
+  border-radius: 6px;
+  top: -5px;
+  left: 105%;
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+.whatsapp:hover .tooltiptext {
+  visibility: visible;
+}

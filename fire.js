@@ -1,17 +1,17 @@
 
 
-var contactRef=firebase.database().ref().child("wagholeenggcom/contactenquiry");
+var contactRef=firebase.database().ref().child("waghole/contactenquiry");
 document.getElementById("contactF").addEventListener("submit",submitform);
 function submitform(e){
     e.preventDefault();
     var name=getInputVal('name');
     var email=getInputVal('email');
 	var phone=getInputVal('phone');
-    var subject=getInputVal('subject');
+    //var subject=getInputVal('subject');
     var message=getInputVal('message');
 
 console.log("submitted");
-    saveForm(name,email,subject,message,phone);
+    saveForm(name,email,'',message,phone);
     document.getElementById("contactF").reset();
 
 }
@@ -36,7 +36,6 @@ function saveForm(name,email,subject,message,phone)
        message :message
 
     });
-    $(".success").css("display","block");
-    $(".success-none").css("display","none");
+     alert("Thank You for your messsage. We will contact You soon");
     
 }
